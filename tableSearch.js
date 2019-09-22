@@ -1,6 +1,6 @@
 function searchTable(textfield, container, row, column) {
 
-	var search, 
+	var search,
 		filter, 
 		found, 
 		table, 
@@ -9,14 +9,14 @@ function searchTable(textfield, container, row, column) {
 		i, 
 		j;
 
-	search = textfield;
+	search = document.querySelector(textfield);
 	filter = search.value.toUpperCase();
-	table = document.getElementById(container);
-	rows = table.getElementsByTagName(row);
+	table = document.querySelector(container);
+	rows = table.querySelectorAll(row);
 
 	for (i = 0; i < rows.length; i++) {
 
-		columns = rows[i].getElementsByTagName(column);
+		columns = rows[i].querySelectorAll(column);
 
 		for (j = 0; j < columns.length; j++) {
 
